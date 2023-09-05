@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>E-commerce product page</title>
+</head>
+
+<body class="Introduction-To-Commerce">
+    <section class="Commerce-Header">
+        <header class="Header">
+            <label for="mobileIcon" class="mobile">
+                <div class="mobile-icon" id="two">
+                    <img src="IMAGES/icon-menu.svg" alt="" srcset="">
+                </div>
+            </label>
+            <input type="checkbox" id="mobileIcon" class="mobileIcon">
+            <div class="Sneakers">
+                <h1>sneakers</h1>
+            </div>
+            <nav class="navbar animate__animated animate__backInLeft" id="nav">
+                <ul>
+                    <div class="x-icon" id="one">
+                        <img src="IMAGES/icon-close.svg" alt="">
+                    </div>
+                    <li>Collections</li>
+                    <li>Men</li>
+                    <li>Womens</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+            <div class="cart" id="three">
+                <img src="IMAGES/icon-cart.svg" alt="">
+                <div class="empty" id="four">
+                    <div class="Empty-cart">
+                        <p>Cart</p>
+                        <hr class="hr-one">
+                        <h3 id="emp">Your cart is empty.</h3>
+                        <div class="filled" id="full">
+                            <div class="filled-one">
+                                <div class="fill-one">
+                                    <img src="IMAGES/image-product-1.jpg" alt="">
+                                </div>
+                                <div class="fill-two">
+                                    <P>Fall Limited Edition Sneakers</P>
+                                    <div class="fill-three">
+                                        <span>$<span id="amount">125.00</span> x <span id="rated">0</span> </span>
+                                       <div class="ans">
+                                        <h5>$<span id="total">0</span></h5>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="delete">
+                                    <img src="IMAGES/icon-delete.svg" alt="" srcset="">
+                                </div>
+                            </div>
+                            <button class="button-two" onclick="checkout()">Checkout</button>
+                            <p id="error"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="avatar">
+                <img src="IMAGES/image-avatar.png" alt="" srcset="">
+            </div>
+            </div>
+        </header>
+        <hr class="hr">
+    </section>
+    <section class="Commerce-main-one">
+        <div class="Main-one">
+            <div class="head-one">
+                <img src="IMAGES/image-product-1.jpg" alt="" srcset="" id="ProductImg">
+            </div>
+            <div class="Main-two">
+                <div class="Sub-div">
+                    <img src="IMAGES/image-product-1.jpg" alt="" srcset="" class="small-img">
+                </div>
+                <div class="Sub-div">
+                    <img src="IMAGES/image-product-2.jpg" alt="" srcset="" class="small-img">
+                </div>
+                <div class="Sub-div">
+                    <img src="IMAGES/image-product-3.jpg" alt="" srcset="" class="small-img">
+                </div>
+                <div class="Sub-div">
+                    <img src="IMAGES/image-product-4.jpg" alt="" srcset="" class="small-img">
+                </div>
+            </div>
+        </div>
+        <div class="Main-three">
+            <h5>SNEAKER COMPANY</h5>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+                durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+            <div class="Main">
+                <div class="sub-one">
+                    <h4>$125.00</h4>
+                    <button>50%</button>
+                </div>
+                <del class="del">$250.00</del>
+            </div>
+            <div class="Main-four">
+                <button class="button">
+                    <img src="IMAGES/icon-minus.svg" alt="" srcset="" id="min">
+                   <span id="qty">0</span>
+                    <img src="IMAGES/icon-plus.svg" alt="" srcset="" id="plus">
+                </button>
+                <button class="button-one" id="submit" onclick="handleClick(click)">
+                    <img src="IMAGES/icon-cart.svg" alt="" srcset="">
+                    Add to cart
+                </button>
+            </div>
+        </div>
+    </section>
+    <script src="main.js">
+    //   let rate = localStorage.getItem("rate")
+    //     console.log(rate)
+    //     rated.innerHTML = rate
+    </script>
+</body>
+
+</html>
