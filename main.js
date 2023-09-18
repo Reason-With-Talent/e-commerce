@@ -1,3 +1,4 @@
+cartItems.innerHTML = `<h3 id="emp">Your cart is empty.</h3>`
 let button1 = document.getElementById("one")
 
 console.log(button1.value)
@@ -54,10 +55,6 @@ min.addEventListener('click', () => {
         total.innerHTML = parseInt(amount.innerHTML) * parseInt(qty.innerHTML)
         //emp.innerHTML = "display"
     } 
-    // let life = emp.innerHTML
-    // if (life = 0) {
-     
-    // }
 })
 
 
@@ -67,11 +64,53 @@ plus.addEventListener('click', () => {
     rated.innerHTML = parseInt(value)+1
     total.innerHTML = parseInt(amount.innerHTML) * parseInt(qty.innerHTML)
 })
- 
-let errorParagraph = document.getElementById("error")
-console.log(errorParagraph)
 
-function checkout() {
+
+submit.addEventListener('click', () =>{
+    const products = []
+    let itemValue = {
+        "item_name": item_name.innerHTML,
+        "price": price.innerHTML,
+        "qty": qty.innerHTML
+    }
+    products.push(itemValue)
+    console.log(products)
+    localStorage.setItem("item", products)
+    let datas = localStorage.getItem("item")
+    products.forEach(item => {
+        console.log(item.item_name)
+        cartItems.innerHTML = `                 <div class="filled" id="full">
+        <div class="filled-one">
+            <div class="fill-one">
+                <img src="IMAGES/image-product-1.jpg" alt="">
+            </div>
+            <div class="fill-two">
+                <P>${item.item_name}</P>
+                <div class="fill-three">
+                    <span>$<span id="amount">${item.price}</span> x <span id="rated">${item.qty}</span> </span>
+                    <div class="ans">
+                        <h5>$<span id="total">${parseInt(item.price)*parseInt(item.qty)}</span></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="delete">
+                <img src="IMAGES/icon-delete.svg" alt="" srcset="">
+            </div>
+        </div>
+        <button class="button-two" id="checkout">Checkout</button>
+        <p id="error"></p>
+    </div>`
+    });
+
+
+})
+
+ 
+
+checkout.addEventListener('click', () => {
+
+let errorParagraph = document.getElementById("error")
+console.log(errorParagraph.innerHTML)
    console.log("button clicked")
-   errorParagraph.textContent = "Something went wrong, please try again ❗"
-}
+   errorParagraph.textContent = "Something went wrong, please try again"
+})

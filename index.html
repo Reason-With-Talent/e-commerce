@@ -38,33 +38,13 @@
                     <li>Contact</li>
                 </ul>
             </nav>
-            <div class="cart" id="three">
-                <img src="IMAGES/icon-cart.svg" alt="">
+            <div class="cart">
+                <img src="IMAGES/icon-cart.svg" alt="" id="three">
                 <div class="empty" id="four">
                     <div class="Empty-cart">
                         <p>Cart</p>
                         <hr class="hr-one">
-                        <h3 id="emp">Your cart is empty.</h3>
-                        <div class="filled" id="full">
-                            <div class="filled-one">
-                                <div class="fill-one">
-                                    <img src="IMAGES/image-product-1.jpg" alt="">
-                                </div>
-                                <div class="fill-two">
-                                    <P>Fall Limited Edition Sneakers</P>
-                                    <div class="fill-three">
-                                        <span>$<span id="amount">125.00</span> x <span id="rated">0</span> </span>
-                                       <div class="ans">
-                                        <h5>$<span id="total">0</span></h5>
-                                       </div>
-                                    </div>
-                                </div>
-                                <div class="delete">
-                                    <img src="IMAGES/icon-delete.svg" alt="" srcset="">
-                                </div>
-                            </div>
-                            <button class="button-two" onclick="checkout()">Checkout</button>
-                            <p id="error"></p>
+                        <div id="cartItems">
                         </div>
                     </div>
                 </div>
@@ -99,13 +79,13 @@
         </div>
         <div class="Main-three">
             <h5>SNEAKER COMPANY</h5>
-            <h1>Fall Limited Edition Sneakers</h1>
+            <h1 id="item_name">Fall Limited Edition Sneakers</h1>
             <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
                 durable rubber outer sole, they’ll withstand everything the weather can offer.
             </p>
             <div class="Main">
                 <div class="sub-one">
-                    <h4>$125.00</h4>
+                    <h4>$<span id="price">25.00</span></h4>
                     <button>50%</button>
                 </div>
                 <del class="del">$250.00</del>
@@ -113,21 +93,17 @@
             <div class="Main-four">
                 <button class="button">
                     <img src="IMAGES/icon-minus.svg" alt="" srcset="" id="min">
-                   <span id="qty">0</span>
+                    <span id="qty">0</span>
                     <img src="IMAGES/icon-plus.svg" alt="" srcset="" id="plus">
                 </button>
-                <button class="button-one" id="submit" onclick="handleClick(click)">
+                <button class="button-one" id="submit">
                     <img src="IMAGES/icon-cart.svg" alt="" srcset="">
                     Add to cart
                 </button>
             </div>
         </div>
     </section>
-    <script src="main.js">
-    //   let rate = localStorage.getItem("rate")
-    //     console.log(rate)
-    //     rated.innerHTML = rate
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
